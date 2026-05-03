@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import SiteNav from '../components/SiteNav.astro';
 // ResonantOS Marketing Site - Immersive Design
 ---
 
@@ -51,28 +52,7 @@ import '../styles/global.css';
 		<div id="blur-zone-bottom" class="blur-zone blur-zone-bottom"></div>
 
 		<!-- Navigation -->
-		<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
-			<div class="backdrop-blur-xl bg-zinc-950/70 border-b border-zinc-800/50">
-				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div class="flex items-center justify-between h-16">
-						<div class="flex items-center">
-							<a href="/" class="text-xl font-medium tracking-tight hover:opacity-80 transition-opacity">
-								<span class="font-light text-white">Resonant</span><span class="font-bold text-emerald-400">OS</span>
-							</a>
-						</div>
-						<div class="hidden md:flex items-center gap-6">
-							<a href="#what-is" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">About</a>
-							<a href="#economy" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">Economy</a>
-							<a href="#features" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">Features</a>
-							<a href="/whitepaper" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">Whitepaper</a>
-							<a href="/dao" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">DAO</a>
-							<a href="#faq" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">FAQ</a>
-							<a href="#waitlist" class="text-sm bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-md transition-colors">Get Started</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
+		<SiteNav />
 
 		<!-- Giant Hero Logo -->
 		<section id="hero-section" class="h-screen relative flex items-center justify-center overflow-hidden">

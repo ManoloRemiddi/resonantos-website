@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import SiteNav from '../components/SiteNav.astro';
 // Symbiotic License Page
 ---
 
@@ -28,26 +29,7 @@ import '../styles/global.css';
 		</div>
 
 		<!-- Navigation -->
-		<nav class="fixed top-0 left-0 right-0 z-50">
-			<div class="backdrop-blur-xl bg-black/70 border-b border-white/5">
-				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div class="flex items-center justify-between h-16">
-						<div class="flex items-center">
-							<a href="/" class="text-xl font-medium tracking-tight font-display hover:opacity-80 transition-opacity">Resonant<span class="text-emerald-400">OS</span></a>
-						</div>
-						<div class="hidden md:flex items-center gap-6">
-							<a href="/" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">Home</a>
-							<a href="/about" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">About</a>
-							<a href="/whitepaper" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">Whitepaper</a>
-							<a href="/dao" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">DAO</a>
-							<a href="/symbiotic-license" class="text-sm text-zinc-100 font-medium">Symbiotic License</a>
-							<a href="https://www.youtube.com/@manolo.remiddi" target="_blank" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">YouTube</a>
-							<a href="http://augmentedmind.co/" target="_blank" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">Blog</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
+		<SiteNav />
 
 		<!-- Content -->
 		<main class="relative z-10 pt-24 pb-20">

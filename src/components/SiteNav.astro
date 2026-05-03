@@ -1,0 +1,48 @@
+---
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const links = [
+	{ label: 'Home', href: '/', activePath: '/' },
+	{ label: 'About', href: '/about', activePath: '/about' },
+	{ label: 'Economy', href: '/#economy' },
+	{ label: 'Features', href: '/#features' },
+	{ label: 'Whitepaper', href: '/whitepaper', activePath: '/whitepaper' },
+	{ label: 'DAO', href: '/dao', activePath: '/dao' },
+	{ label: 'Symbiotic License', href: '/symbiotic-license', activePath: '/symbiotic-license' },
+	{ label: 'FAQ', href: '/#faq' },
+	{ label: 'YouTube', href: 'https://www.youtube.com/@manolo.remiddi', external: true },
+	{ label: 'Blog', href: 'https://augmentedmind.co/', external: true },
+];
+
+const linkClass = (activePath?: string) =>
+	activePath === pathname
+		? 'text-sm text-zinc-100 font-medium transition-colors whitespace-nowrap'
+		: 'text-sm text-zinc-400 hover:text-zinc-100 transition-colors whitespace-nowrap';
+---
+
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+	<div class="backdrop-blur-xl bg-black/75 border-b border-white/5">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex items-center gap-4 min-h-16 py-3">
+				<a href="/" class="flex-none text-xl font-medium tracking-tight font-display hover:opacity-80 transition-opacity">
+					<span class="font-light text-white">Resonant</span><span class="font-bold text-emerald-400">OS</span>
+				</a>
+				<div class="flex flex-1 items-center justify-end gap-4 overflow-x-auto">
+					{links.map((link) => (
+						<a
+							href={link.href}
+							class={linkClass(link.activePath)}
+							target={link.external ? '_blank' : undefined}
+							rel={link.external ? 'noopener noreferrer' : undefined}
+						>
+							{link.label}
+						</a>
+					))}
+					<a href="/#waitlist" class="flex-none text-sm bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-md transition-colors whitespace-nowrap">
+						Get Started
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
