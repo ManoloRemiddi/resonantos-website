@@ -739,29 +739,62 @@ import SiteNav from '../components/SiteNav.astro';
 				scroll-behavior: smooth;
 			}
 			
-			/* Giant hero text - 17vw for ~80-90% page width */
+			/* Hero wordmark */
 			.hero-text {
-				font-size: 18vw;
+				font-size: 3.8rem;
 				line-height: 0.9;
 			}
-			
+
+			@media (min-width: 640px) {
+				.hero-text {
+					font-size: 5.8rem;
+				}
+			}
+
 			@media (min-width: 768px) {
 				.hero-text {
-					font-size: 17vw;
+					font-size: 7.5rem;
+				}
+			}
+
+			@media (min-width: 1024px) {
+				.hero-text {
+					font-size: 9.5rem;
+				}
+			}
+
+			@media (min-width: 1440px) {
+				.hero-text {
+					font-size: 11rem;
 				}
 			}
 			
-			/* Tagline - matches logo width */
+			/* Tagline */
 			.tagline-text {
-				font-size: 3.5vw;
-				letter-spacing: 0.3em;
+				font-size: 0.68rem;
+				letter-spacing: 0.08em;
 				text-transform: uppercase;
+				white-space: nowrap;
 			}
-			
+
+			@media (min-width: 640px) {
+				.tagline-text {
+					font-size: 0.875rem;
+					letter-spacing: 0.12em;
+				}
+			}
+
 			@media (min-width: 768px) {
 				.tagline-text {
-					font-size: 2.8vw;
-					letter-spacing: 0.35em;
+					font-size: 1rem;
+					letter-spacing: 0.16em;
+				}
+			}
+
+			@media (min-width: 1024px) {
+				.tagline-text {
+					font-size: 1.125rem;
+					letter-spacing: 0.18em;
 				}
 			}
 			
